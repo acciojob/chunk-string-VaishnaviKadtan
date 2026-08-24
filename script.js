@@ -1,17 +1,14 @@
 function stringChop(str, size) {
   // your code here
-	stringChop("Hello, world!", 5);
-// ["Hello", ", wor", "ld!"]
+if(str == null){
+	return [];
+}
+	let result = [];
 
-stringChop("12345", 2);
-// ["12", "34", "5"]
-
-stringChop("abc", 5);
-// ["abc"]
-
-stringChop(null, 3);
-	
-// []
+	for (let i = 0; i < str.lenght; i += size){
+		result.push(str.substring(i, i +size));
+	}
+	return result;
 }
 
 // Do not change the code below
