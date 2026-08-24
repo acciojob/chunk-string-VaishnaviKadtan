@@ -1,20 +1,15 @@
-
 function stringChop(str, size) {
-  // your code here
     if (str == null) {
         return [];
     }
 
     let result = [];
-    let i = 0;
 
-    while (i < str.length) {
+    for (let i = 0; i < str.length; i += size) {
         result.push(str.substring(i, i + size));
-        i += size;
     }
 
     return result;
-}
 }
 
 // Do not change the code below
